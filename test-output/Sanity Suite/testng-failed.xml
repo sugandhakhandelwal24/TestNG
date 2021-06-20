@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Sanity Suite]">
-  <parameter name="passsword" value="abssdf"/>
-  <parameter name="username" value="sugandha.khandelwal19@gmail.com"/>
   <test thread-count="5" name="MyApplicationTest(failed)">
-    <groups>
-      <run>
-        <include name="Regression"/>
-      </run>
-    </groups>
     <classes>
-      <class name="test.LoginTest">
+      <class name="shoppingApplication.addItemToCart">
         <methods>
-          <include name="Login"/>
+          <include name="addToCart"/>
+          <include name="setup"/>
+          <include name="TearDown"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- test.LoginTest -->
+      </class> <!-- shoppingApplication.addItemToCart -->
     </classes>
   </test> <!-- MyApplicationTest(failed) -->
 </suite> <!-- Failed suite [Sanity Suite] -->
