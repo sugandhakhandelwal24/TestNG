@@ -52,10 +52,13 @@ public class addItemToCart {
 	@Test(dependsOnMethods="login")
 	public void addToCart()
 	{
-		
-		//driver.manage().timeouts().implicitlyWait(30000, TimeUnit.MILLISECONDS);
+	
 		WebElement addToCartItem = driver.findElement(By.xpath("//*[@id='add-to-cart-sauce-labs-bolt-t-shirt']"));
 		addToCartItem.click();
+		
+		WebElement cart = driver.findElement(By.xpath("//*[@class = 'shopping_cart_link']"));
+		cart.click();
+		
 		
 	}
 	
